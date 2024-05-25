@@ -173,6 +173,12 @@ class OpenSettingsPlusIOS extends OpenSettingsPlus {
     return sendCustomMessage('App-prefs:Privacy');
   }
 
+  /// Open iOS settings in `Tracking` section.
+  /// returns operation successful or failure.
+  Future<bool> tracking() {
+    return sendCustomMessage('App-prefs:Privacy&path=Tracking');
+  }
+
   /// Open iOS settings in `Profiles and Device Management` section.
   /// returns operation successful or failure.
   Future<bool> profilesAndDeviceManagement() {
